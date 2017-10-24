@@ -13,7 +13,7 @@ import {
     RkText,
     RkTheme
 } from 'react-native-ui-kitten';
-import {MainRoutes} from '../../config/navigation/routes';
+import {MainRoutes} from '../../config/navigation/route';
 import {FontAwesome} from '../../assets/icons';
 
 export class SideMenu extends React.Component {
@@ -67,7 +67,7 @@ export class SideMenu extends React.Component {
                     showsVerticalScrollIndicator={false}>
                     <View style={[styles.container, styles.content]}>
                         {this._renderIcon()}
-                        <RkText rkType='logo'>UI Kitten</RkText>
+                        <RkText rkType='logo'>스마일 다방</RkText>
                     </View>
                     {menu}
                 </ScrollView>

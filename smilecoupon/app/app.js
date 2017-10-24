@@ -1,23 +1,52 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+    ScrollView,
+    View,
+    StyleSheet,
+    Text
+} from 'react-native';
+import {
+    DrawerNavigator,
+    StackNavigator
+} from 'react-navigation';
+import {AppRoutes} from './config/navigation/routeBuilder';
+import {withRkTheme} from 'react-native-ui-kitten';
+import * as Screens from './views';
 
-export default class App extends React.Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>Oggffffffgp!</Text>
-                <Text>Changes you make will automatically reload.</Text>
-                <Text>Shake your phone to open the developer menu.</Text>
-            </View>
-        );
+function getCurrentRouteName(navigationState) {
+    if (!navigationState) {
+        return null;
     }
+    const route = navigationState.routes[navigationState.index];
+    if (route.routes) {
+        return getCurrentRouteName(route);
+    }
+    return route.routeName;
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
+let SideMenu = withRkTheme(Screens.SideMenu);
+const SmileCouponApp = StackNavigator({
+    Home: {
+        screen: DrawerNavigator({
+                ...AppRoutes,
+            },
+            {
+                contentComponent: (props) => <SideMenu {...props}/>
+            })
+    }
+}, {
+    headerMode: 'none',
 });
+
+export default () => (
+    <SmileCouponApp
+        onNavigationStateChange={(prevState, currentState) => {
+      const currentScreen = getCurrentRouteName(currentState);
+      const prevScreen = getCurrentRouteName(prevState);
+
+      if (prevScreen !== currentScreen) {
+
+      }
+    }}
+    />
+);
