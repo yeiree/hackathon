@@ -24,3 +24,22 @@ Version.schema = {
         id: 'int'
     }
 };
+
+export class Itemdata extends Realm.Object { }
+Itemdata.schema = {
+    name: 'Itemdata',
+    properties: {
+        brandname: 'string',
+        item: {type: 'list', objectType: 'Itemlist'}
+    }
+};
+
+export class Itemlist extends Realm.Object { }
+Itemlist.schema = {
+    name: 'Itemlist',
+    properties: {
+        no: 'string',
+        name: 'string',
+        price: 'double',
+    }
+};

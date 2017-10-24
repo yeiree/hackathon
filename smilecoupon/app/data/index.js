@@ -11,6 +11,10 @@ class DataProvider {
         return realm.objects('User');
     }
 
+    getItemData() {
+        return realm.objects('Itemdata');
+    }
+
     populateRealm() {
         populate();
     }
