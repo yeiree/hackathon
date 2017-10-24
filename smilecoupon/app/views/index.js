@@ -1,2 +1,3 @@
-export * from './Home';
-export * from './navBar';
+export * from './navigation';
+export * from './grid';
+export * from './mainview';
