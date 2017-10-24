@@ -1,2 +1,2 @@
-export * from './navigation';
 export * from './Home';
+export * from './navBar';

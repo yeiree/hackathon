@@ -1,5 +1,5 @@
 import {FontIcons} from '../../assets/icons';
-import * as Screens from '../../screens/index';
+import * as Screens from '../../views/index';
 import _ from 'lodash';
 
 export const MainRoutes = [
@@ -12,25 +12,25 @@ export const MainRoutes = [
             {
                 id: 'Login1',
                 title: 'Login V1',
-                screen: Screens.LoginV1,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'Login2',
                 title: 'Login V2',
-                screen: Screens.LoginV2,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'SignUp',
                 title: 'Sign Up',
-                screen: Screens.SignUp,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'password',
                 title: 'Password Recovery',
-                screen: Screens.PasswordRecovery,
+                screen: Screens.Main,
                 children: []
             },
         ]
@@ -39,48 +39,48 @@ export const MainRoutes = [
         id: 'SocialMenu',
         title: 'Social',
         icon: FontIcons.profile,
-        screen: Screens.SocialMenu,
+        screen: Screens.Main,
         children: [
             {
                 id: 'ProfileV1',
                 title: 'User Profile V1',
-                screen: Screens.ProfileV1,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'ProfileV2',
                 title: 'User Profile V2',
-                screen: Screens.ProfileV2,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'ProfileV3',
                 title: 'User Profile V3',
-                screen: Screens.ProfileV3,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'ProfileSettings',
                 title: 'Profile Settings',
-                screen: Screens.ProfileSettings,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'Notifications',
                 title: 'Notifications',
-                screen: Screens.Notifications,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'Contacts',
                 title: 'Contacts',
-                screen: Screens.Contacts,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'Feed',
                 title: 'Feed',
-                screen: Screens.Feed,
+                screen: Screens.Main,
                 children: []
             },
         ]
@@ -89,42 +89,42 @@ export const MainRoutes = [
         id: 'ArticlesMenu',
         title: 'Articles',
         icon: FontIcons.article,
-        screen: Screens.ArticleMenu,
+        screen: Screens.Main,
         children: [
             {
                 id: 'Articles1',
                 title: 'Article List V1',
-                screen: Screens.Articles1,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'Articles2',
                 title: 'Article List V2',
-                screen: Screens.Articles2,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'Articles3',
                 title: 'Article List V3',
-                screen: Screens.Articles3,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'Articles4',
                 title: 'Article List V4',
-                screen: Screens.Articles4,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'Blogposts',
                 title: 'Blogposts',
-                screen: Screens.Blogposts,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'Article',
                 title: 'Article View',
-                screen: Screens.Article,
+                screen: Screens.Main,
                 children: []
             }
         ]
@@ -133,24 +133,24 @@ export const MainRoutes = [
         id: 'MessagingMenu',
         title: 'Messaging',
         icon: FontIcons.mail,
-        screen: Screens.MessagingMenu,
+        screen: Screens.Main,
         children: [
             {
                 id: 'Chat',
                 title: 'Chat',
-                screen: Screens.Chat,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'ChatList',
                 title: 'Chat List',
-                screen: Screens.ChatList,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'Comments',
                 title: 'Comments',
-                screen: Screens.Comments,
+                screen: Screens.Main,
                 children: []
             },
         ]
@@ -159,11 +159,11 @@ export const MainRoutes = [
         id: 'DashboardsMenu',
         title: 'Dashboards',
         icon: FontIcons.dashboard,
-        screen: Screens.DashboardMenu,
+        screen: Screens.Main,
         children: [{
             id: 'Dashboard',
             title: 'Dashboard',
-            screen: Screens.Dashboard,
+            screen: Screens.Main,
             children: []
         },]
     },
@@ -171,11 +171,11 @@ export const MainRoutes = [
         id: 'WalkthroughMenu',
         title: 'Walkthroughs',
         icon: FontIcons.mobile,
-        screen: Screens.WalkthroughMenu,
+        screen: Screens.Main,
         children: [{
             id: 'Walkthrough',
             title: 'Walkthrough',
-            screen: Screens.WalkthroughScreen,
+            screen: Screens.Main,
             children: []
         }]
     },
@@ -183,20 +183,20 @@ export const MainRoutes = [
         id: 'EcommerceMenu',
         title: 'Ecommerce',
         icon: FontIcons.card,
-        screen: Screens.EcommerceMenu,
+        screen: Screens.Main,
         children: [
             {
                 id: 'Cards',
                 title: 'Cards',
                 icon: FontIcons.card,
-                screen: Screens.Cards,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'AddToCardForm',
                 title: 'Add To Card Form',
                 icon: FontIcons.addToCardForm,
-                screen: Screens.AddToCardForm,
+                screen: Screens.Main,
                 children: []
             },
 
@@ -206,31 +206,31 @@ export const MainRoutes = [
         id: 'NavigationMenu',
         icon: FontIcons.navigation,
         title: 'Navigation',
-        screen: Screens.NavigationMenu,
+        screen: Screens.Main,
         children: [
             {
                 id: 'GridV1',
                 title: 'Grid Menu V1',
-                screen: Screens.GridV1,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'GridV2',
                 title: 'Grid Menu V2',
-                screen: Screens.GridV2,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'List',
                 title: 'List Menu',
-                screen: Screens.ListMenu,
+                screen: Screens.Main,
                 children: []
             },
             {
                 id: 'Side',
                 title: 'Side Menu',
                 action: 'DrawerOpen',
-                screen: Screens.SideMenu,
+                screen: Screens.Main,
                 children: []
             }
         ]
@@ -239,12 +239,12 @@ export const MainRoutes = [
         id: 'OtherMenu',
         title: 'Other',
         icon: FontIcons.other,
-        screen: Screens.OtherMenu,
+        screen: Screens.Main,
         children: [
             {
                 id: 'Settings',
                 title: 'Settings',
-                screen: Screens.Settings,
+                screen: Screens.Main,
                 children: []
             }
         ]
@@ -253,16 +253,16 @@ export const MainRoutes = [
         id: 'Themes',
         title: 'Themes',
         icon: FontIcons.theme,
-        screen: Screens.Themes,
+        screen: Screens.Main,
         children: []
     },
 ];
 
 let menuRoutes = _.cloneDeep(MainRoutes);
 menuRoutes.unshift({
-    id: 'GridV2',
+    id: 'Main',
     title: 'Start',
-    screen: Screens.GridV2,
+    screen: Screens.Main,
     children: []
 },);
 
