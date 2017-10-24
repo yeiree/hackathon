@@ -9,7 +9,7 @@ import {
     DrawerNavigator,
     StackNavigator
 } from 'react-navigation';
-//import {AppRoutes} from './config/navigation/routesBuilder';
+import {AppRoutes} from './config/navigation/routesBuilder';
 import * as Screens from './views';
 
 import { Main }  from './views/Home';
@@ -31,7 +31,12 @@ const SmileApp = StackNavigator({
         screen: Screens.Main
     },
     Home: {
-        screen:  Screens.Main
+        screen: DrawerNavigator({
+                ...AppRoutes,
+            },
+            {
+                //contentComponent: (props) => <SideMenu {...props}></SideMenu>
+            })
     }
 }, {
     headerMode: 'none',
@@ -41,6 +46,7 @@ const SmileApp = StackNavigator({
 export default class App extends React.Component {
     render() {
         return (
+            <View>
             <SmileApp
                 onNavigationStateChange={(prevState, currentState) => {
                     const currentScreen = getCurrentRouteName(currentState);
@@ -51,6 +57,8 @@ export default class App extends React.Component {
                     }
                 }}
             />
+            <Main />
+            </View>
         );
     }
 }

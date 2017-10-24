@@ -11,7 +11,7 @@ import {
 
 let main = {};
 let flatRoutes = {};
-(MenuRoutes).map(function (route) {
+/*(MenuRoutes).map(function (route) {
 
   let wrapToRoute = (route) => {
     return {
@@ -25,7 +25,7 @@ let flatRoutes = {};
   for (let child of route.children) {
     flatRoutes[child.id] = wrapToRoute(child);
   }
-});
+});*/
 
 let ThemedNavigationBar = withRkTheme(NavBar);
 
