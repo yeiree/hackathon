@@ -76,7 +76,7 @@ export class SocialBar extends RkComponent {
         </View>
         <View style={section}>
           <RkButton rkType='clear' onPress={updateShares}>
-            <RkText rkType='awesome hintColor' style={icon}>{FontAwesome.user}</RkText>
+            <RkText rkType='awesome hintColor' style={icon}>{FontAwesome.smile}</RkText>
             <RkText rkType='primary4 hintColor' style={label}>{shares}</RkText>
           </RkButton>
         </View>
