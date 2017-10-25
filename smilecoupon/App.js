@@ -15,10 +15,11 @@ import {
     DrawerNavigator,
     StackNavigator
 } from 'react-navigation';
-import {AppRoutes} from './app/config/navigation/routesBuilder';
+//import {AppRoutes} from './app/config/navigation/routesBuilder';
 import {bootstrap} from './app/config/bootstrap';
 import { AppLoading, Asset, Font } from 'expo';
 import track from './app/config/analytics';
+import {MainView} from "./app/views/mainview";
 
 bootstrap();
 RkTheme.setTheme(KittenTheme);
@@ -35,21 +36,7 @@ function getCurrentRouteName(navigationState) {
 }
 
 let SideMenu = withRkTheme(Screens.SideMenu);
-const SmileEcoupon = StackNavigator({
-    First: {
-        screen: Screens.SplashScreen
-    },
-    Home: {
-        screen: DrawerNavigator({
-                ...AppRoutes,
-            },
-            {
-                contentComponent: (props) => <SideMenu {...props}/>
-            })
-    }
-}, {
-    headerMode: 'none',
-});
+
 
 export default class App extends React.Component {
 
@@ -81,7 +68,7 @@ export default class App extends React.Component {
         }
 
         return (
-            <SideMenu />
+            <MainView />
                 /*
             <SmileEcoupon
                 onNavigationStateChange={(prevState, currentState) => {

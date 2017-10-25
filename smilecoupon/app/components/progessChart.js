@@ -23,13 +23,13 @@ export class ProgressChart extends RkComponent {
     this.size = 120;
     this.fontSize = 25;
     this.state = {
-      percents: 72
+      percents: 75
     }
   }
 
   componentDidMount() {
-    this.setStateInterval = setInterval(() => {
-      let positive = Math.random() > 0.5;
+   /* this.setStateInterval = setInterval(() => {
+      /*let positive = Math.random() > 0.5;
       if (this.state.percents > 95) {
         positive = false
       } else if (this.state.percents < 60) {
@@ -38,7 +38,7 @@ export class ProgressChart extends RkComponent {
       this.setState({
         percents: positive ? this.state.percents + 1 : this.state.percents - 1
       });
-    }, 1500);
+    }, 1500);*/
   }
 
   componentWillUnmount() {
@@ -51,8 +51,7 @@ export class ProgressChart extends RkComponent {
 
   render() {
     return (
-      <View>
-        <RkText rkType='header4'>나의 쿠폰 현황</RkText>
+
         <View style={styles.chartContainer}>
           <Svg width={scale(this.size)} height={scale(this.size)}>
             <VictoryPie
@@ -82,7 +81,7 @@ export class ProgressChart extends RkComponent {
               fontFamily={RkTheme.current.fonts.family.regular}
               stroke={RkTheme.current.colors.text.base}
               fill={RkTheme.current.colors.text.base}>
-              {`${this.state.percents}%`}
+              {`7/12`}
             </SvgText>
           </Svg>
           <View>
@@ -91,7 +90,7 @@ export class ProgressChart extends RkComponent {
             <RkText rkType='secondary2'>5번 남았어요.</RkText>
           </View>
         </View>
-      </View>
+
     )
   }
 }
@@ -101,6 +100,6 @@ let styles = RkStyleSheet.create(theme => ({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    marginTop: 10
+    marginTop: 100
   }
 }));
