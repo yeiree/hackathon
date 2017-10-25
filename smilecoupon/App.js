@@ -19,7 +19,7 @@ import {
 import {bootstrap} from './app/config/bootstrap';
 import { AppLoading, Asset, Font } from 'expo';
 import track from './app/config/analytics';
-
+import {transition} from './app/config/navigation/transitions'
 bootstrap();
 RkTheme.setTheme(KittenTheme);
 
@@ -57,11 +57,35 @@ const Stack = {
 const DrawerRoutes1 = {
     MainViewStack: {
         name: 'MainViewStack',
-        screen: StackNavigator(Stack, { initialRouteName: 'MainView' })
+        screen: StackNavigator(Stack, {
+                initialRouteName: 'MainView'
+                , headerMode: 'screen'
+                , cardStyle: {backgroundColor: 'transparent'}
+                , transitionConfig: transition
+                , navigationOptions: ({navigation, screenProps}) => ({
+                    gesturesEnabled: false
+                    , header: (headerProps) => {
+                        return <NavBar navigation={navigation} headerProps={headerProps}/>
+                    }
+                })
+            }
+        )
     },
     ItemListGridStack: {
         name: 'ItemListGridStack',
-        screen: StackNavigator(Stack, { initialRouteName: 'ItemListGrid' })
+        screen: StackNavigator(Stack, {
+                initialRouteName: 'ItemListGridStack'
+                , headerMode: 'screen'
+                , cardStyle: {backgroundColor: 'transparent'}
+                , transitionConfig: transition
+                , navigationOptions: ({navigation, screenProps}) => ({
+                    gesturesEnabled: false
+                    , header: (headerProps) => {
+                        return <NavBar navigation={navigation} headerProps={headerProps}/>
+                    }
+                })
+            }
+        )
     },
 };
 
