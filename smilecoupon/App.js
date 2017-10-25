@@ -9,7 +9,10 @@ import {
     View,
     StyleSheet,
     Text,
-    FlatList
+    FlatList,
+    AppState,
+    Platform,
+    Picker
 } from 'react-native';
 import {
     DrawerNavigator,
@@ -19,6 +22,9 @@ import {
 import {bootstrap} from './app/config/bootstrap';
 import { AppLoading, Asset, Font } from 'expo';
 import track from './app/config/analytics';
+import {PushController} from './app/pushController'
+import PushNotification from 'react-native-push-notification';
+import transition from './app/config/navigation/transitions'
 
 bootstrap();
 RkTheme.setTheme(KittenTheme);
@@ -54,15 +60,40 @@ const Stack = {
     }
 };
 
+
 const DrawerRoutes1 = {
     MainViewStack: {
         name: 'MainViewStack',
-        screen: StackNavigator(Stack, { initialRouteName: 'MainView' })
+        screen: StackNavigator(Stack, {
+                initialRouteName: 'MainView'
+                , headerMode: 'screen'
+                , cardStyle: {backgroundColor: 'transparent'}
+                , transitionConfig: transition
+                , navigationOptions: ({navigation, screenProps}) => ({
+                    gesturesEnabled: false
+                    , header: (headerProps) => {
+                        return <NavBar navigation={navigation} headerProps={headerProps}/>
+                    }
+                })
+            }
+        )
     },
     ItemListGridStack: {
         name: 'ItemListGridStack',
-        screen: StackNavigator(Stack, { initialRouteName: 'ItemListGrid' })
-    },
+        screen: StackNavigator(Stack, {
+                initialRouteName: 'MainView'
+                , headerMode: 'screen'
+                , cardStyle: {backgroundColor: 'transparent'}
+                , transitionConfig: transition
+                , navigationOptions: ({navigation, screenProps}) => ({
+                    gesturesEnabled: false
+                    , header: (headerProps) => {
+                        return <NavBar navigation={navigation} headerProps={headerProps}/>
+                    }
+                })
+            }
+        )
+    }
 };
 
 const RootNavigator =
@@ -86,6 +117,38 @@ const RootNavigator =
 
 
 export default class App extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.handleAppStateChange = this.handleAppStateChange.bind(this);
+        this.state = {
+            seconds: 5,
+        };
+    }
+
+    componentDidMount() {
+        AppState.addEventListener('change', this.handleAppStateChange);
+    }
+
+    componentWillUnmount() {
+        AppState.removeEventListener('change', this.handleAppStateChange);
+    }
+
+    handleAppStateChange(appState) {
+        if (appState === 'background') {
+            let date = new Date(Date.now() + (this.state.seconds * 1000));
+
+            if (Platform.OS === 'ios') {
+                date = date.toISOString();
+            }
+
+            PushNotification.localNotificationSchedule({
+                message: "My Notification Message",
+                date,
+            });
+        }
+    }
 
     state = {
         isReady: false,
@@ -115,7 +178,10 @@ export default class App extends React.Component {
         }
 
         return (
-            <RootNavigator />
+            <View>
+                <RootNavigator />
+                <PushController />
+            </View>
                 /*
             <SmileEcoupon
                 onNavigationStateChange={(prevState, currentState) => {
