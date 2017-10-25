@@ -12,6 +12,7 @@ import {
     RkTheme,
 } from 'react-native-ui-kitten';
 
+import {KittenTheme} from '../config/theme'
 import {FontAwesome} from '../assets/icons';
 
 import {
@@ -29,6 +30,7 @@ export class MainView extends React.Component {
         super(props);
     }
 
+    component
     renderStatItem(item) {
         return (
             <View style={[styles.statItemContainer, {backgroundColor: item.background}]} key={item.name}>

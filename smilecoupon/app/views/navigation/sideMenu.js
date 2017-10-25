@@ -13,7 +13,7 @@ import {
     RkText,
     RkTheme
 } from 'react-native-ui-kitten';
-import {MainRoutes} from '../../config/navigation/route';
+import {MainRoutes} from '../../config/navigation/routes';
 import {FontAwesome} from '../../assets/icons';
 
 export class SideMenu extends React.Component {
@@ -84,7 +84,8 @@ let styles = RkStyleSheet.create(theme => ({
         borderColor: theme.colors.border.base
     },
     root: {
-        paddingTop: Platform.OS === 'ios' ? 20 : 0,
+        //paddingTop: Platform.OS === 'ios' ? 20 : 0,
+        paddingTop: 20,
         backgroundColor: theme.colors.screen.base
     },
     content: {

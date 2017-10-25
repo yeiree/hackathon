@@ -4,13 +4,15 @@ import {
 } from 'react-native';
 import {RkTheme} from 'react-native-ui-kitten';
 import {KittenTheme} from './theme';
-import {AvatarTypes} from '../components/avatar/types';
 import {GradientButtonTypes} from '../components/gradientButton/types';
 import {SwitchTypes} from '../components/switch/types';
 import {SocialBarTypes} from '../components/socialBar/types';
 import {scale, scaleModerate, scaleVertical} from '../utils/scale';
+import {MainView, ItemListGrid, SideMenu, SplashScreen} from '../views'
+import { Font } from 'expo';
 
 export let bootstrap = () => {
+
 
   RkTheme.setTheme(KittenTheme, null);
 
@@ -480,7 +482,6 @@ export let bootstrap = () => {
    Register components
    */
 
-  RkTheme.registerComponent('Avatar', AvatarTypes);
   RkTheme.registerComponent('GradientButton', GradientButtonTypes);
   RkTheme.registerComponent('RkSwitch', SwitchTypes);
   RkTheme.registerComponent('SocialBar', SocialBarTypes);

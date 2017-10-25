@@ -23,7 +23,6 @@ export class ItemView extends React.Component {
     render() {
         let size = this.state.size;
         let iteminfo = this.state.iteminfo;
-
         return (
 
             <RkButton rkType='tile'

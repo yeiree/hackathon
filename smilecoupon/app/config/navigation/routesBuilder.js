@@ -2,32 +2,41 @@ import React from 'react';
 import _ from 'lodash';
 import {StackNavigator} from 'react-navigation'
 import {withRkTheme} from 'react-native-ui-kitten'
-import {NavBar} from '../../views/index';
+import {NavBar} from '../../components/index';
 import transition from './transitions';
 import {
   MenuRoutes,
   MainRoutes
-} from './route';
+} from './routes';
 
 let main = {};
 let flatRoutes = {};
-(MenuRoutes).map(function (route) {
+(MenuRoutes).map(function (route, index) {
 
-  let wrapToRoute = (route) => {
-    return {
-      screen: withRkTheme(route.screen),
-      title: route.title
+  /*
+    let wrapToRoute = (route) => {
+        return {
+            screen: withRkTheme(route.screen),
+            title: route.title
+        }
+    };
+    */
+    let wrapToRoute = (route) => {
+        return {
+            screen: route.screen,
+            title: route.title
+        }
+    };
+
+    flatRoutes[route.id] = wrapToRoute(route);
+    main[route.id] = wrapToRoute(route);
+    for (let child of route.children) {
+        flatRoutes[child.id] = wrapToRoute(child);
     }
-  };
-
-  flatRoutes[route.id] = wrapToRoute(route);
-  main[route.id] = wrapToRoute(route);
-  for (let child of route.children) {
-    flatRoutes[child.id] = wrapToRoute(child);
-  }
 });
 
-let ThemedNavigationBar = withRkTheme(NavBar);
+//let ThemedNavigationBar = withRkTheme(NavBar);
+let ThemedNavigationBar = NavBar;
 
 const DrawerRoutes = Object.keys(main).reduce((routes, name) => {
   let stack_name = name;
@@ -41,7 +50,7 @@ const DrawerRoutes = Object.keys(main).reduce((routes, name) => {
       navigationOptions: ({navigation, screenProps}) => ({
         gesturesEnabled: false,
         header: (headerProps) => {
-          return <ThemedNavigationBar navigation={navigation} headerProps={headerProps}/>
+          return <NavBar navigation={navigation} headerProps={headerProps}/>
         }
       })
     })

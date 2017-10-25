@@ -10,11 +10,13 @@ import {
     RkText,
     RkTheme
 } from 'react-native-ui-kitten'
+import {ProgressBar} from '../../components';
 import {
     KittenTheme
 } from '../../config/theme';
 import {NavigationActions} from 'react-navigation';
 import {scale, scaleModerate, scaleVertical} from '../../utils/scale';
+import {Font} from 'expo';
 
 let timeFrame = 500;
 
@@ -29,6 +31,7 @@ export class SplashScreen extends React.Component {
 
     componentDidMount() {
         StatusBar.setHidden(true, 'none');
+
         RkTheme.setTheme(KittenTheme);
 
         this.timer = setInterval(() => {
@@ -61,10 +64,14 @@ export class SplashScreen extends React.Component {
                 <View>
                     <Image style={[styles.image, {width}]} source={require('../../assets/images/splashBack.png')}/>
                     <View style={styles.text}>
-                        <RkText rkType='light' style={styles.hero}>Smile eCoupon</RkText>
-                        <RkText rkType='logo' style={styles.appName}>Smile eCoupon</RkText>
+                        <RkText rkType='light' style={styles.hero}>React Native</RkText>
+                        <RkText rkType='logo' style={styles.appName}>UI Kitten</RkText>
                     </View>
                 </View>
+                <ProgressBar
+                    color={RkTheme.current.colors.accent}
+                    style={styles.progress}
+                    progress={this.state.progress} width={scale(320)}/>
             </View>
         )
     }

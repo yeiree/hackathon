@@ -10,7 +10,7 @@ import {
     RkButton,
     RkStyleSheet
 } from 'react-native-ui-kitten';
-import {MainRoutes} from '../../config/navigation/route';
+import {MainRoutes} from '../../config/navigation/routes';
 import {itemdata} from '../../data/raw'
 import {ItemView} from '../../components'
 
@@ -41,13 +41,16 @@ export class ItemListGrid extends React.Component {
     render() {
 
         let items = <View/>;
-        let test = JSON.stringify(itemdata);
 
         if (this.state.dimensions) {
             let size = this.state.dimensions.width / 2;
             let emptyCount = this._getEmptyCount(size);
 
-            items = itemdata.map(function (iteminfo, index) {
+            let filterdItemData = itemdata.filter(function(item) {
+                item.brandname === 'starbucks'
+            });
+
+            items = filterdItemData.map(function (iteminfo, index) {
                 return (
                    <ItemView key={index} size={size} iteminfo={iteminfo} />
                 )
@@ -58,10 +61,10 @@ export class ItemListGrid extends React.Component {
             }
         }
         return (
-            <View style={styles.root}
+            <ScrollView style={styles.root}
                 contentContainerStyle={styles.rootContainer}>
                 {items}
-            </View>
+            </ScrollView>
         );
     }
 }

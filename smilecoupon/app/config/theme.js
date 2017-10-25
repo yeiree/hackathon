@@ -1,4 +1,5 @@
 import {scale, scaleVertical} from '../utils/scale'
+import {Font} from 'expo'
 
 const Colors = {
   accent: '#ff2824',

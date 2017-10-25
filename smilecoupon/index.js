@@ -4,4 +4,5 @@ import {
 
 import App from './app/app';
 
-AppRegistry.registerComponent('SmileEcouponApp', () => App);
+//export default SmileCouponApp;
+AppRegistry.registerComponent('SmileCouponApp', () => App);

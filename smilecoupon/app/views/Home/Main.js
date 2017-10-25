@@ -4,7 +4,7 @@ import {
     Text,
     View
 } from 'react-native';
-import {MainRoutes} from '../../config/navigation/route';
+import {MainRoutes} from '../../config/navigation/routes';
 
 export class Main extends React.Component {
     static navigationOptions = ({navigation}) => ({
