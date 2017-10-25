@@ -52,6 +52,9 @@ const Stack = {
     },
     ItemListGrid: {
         screen: Screens.ItemListGrid
+    },
+    OrderListGrid: {
+        screen: Screens.OrderListGrid
     }
 };
 
@@ -76,6 +79,22 @@ const DrawerRoutes1 = {
         name: 'ItemListGridStack',
         screen: StackNavigator(Stack, {
                 initialRouteName: 'ItemListGridStack'
+                , headerMode: 'screen'
+                , cardStyle: {backgroundColor: 'transparent'}
+                , transitionConfig: transition
+                , navigationOptions: ({navigation, screenProps}) => ({
+                    gesturesEnabled: false
+                    , header: (headerProps) => {
+                        return <NavBar navigation={navigation} headerProps={headerProps}/>
+                    }
+                })
+            }
+        )
+    },
+    OrderListGridStack: {
+        name: 'OrderListGridStack',
+        screen: StackNavigator(Stack, {
+                initialRouteName: 'OrderListGridStack'
                 , headerMode: 'screen'
                 , cardStyle: {backgroundColor: 'transparent'}
                 , transitionConfig: transition

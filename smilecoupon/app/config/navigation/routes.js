@@ -12,23 +12,23 @@ export const MainRoutes = [
     },
     {
         id: 'ItemListGrid',
-        title: 'ItemListGrid',
+        title: 'ItemList',
         icon: FontIcons.smile,
         screen:Screens.ItemListGrid,
         children: []
     },
     {
-        id: 'ItemListGrid2',
-        title: 'ItemListGrid',
+        id: 'OrderListGrid',
+        title: 'My Order',
         icon: FontIcons.smile,
-        screen: Screens.ItemListGrid,
+        screen: Screens.OrderListGrid,
         children: []
     },
     {
-        id: 'ItemListGrid3',
-        title: 'ItemListGrid',
+        id: 'UserInfoGrid',
+        title: 'My Info',
         icon: FontIcons.smile,
-        screen: Screens.ItemListGrid,
+        screen: Screens.OrderListGrid,
         children: []
     }
 
