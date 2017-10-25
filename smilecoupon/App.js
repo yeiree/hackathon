@@ -4,6 +4,7 @@ import {withRkTheme, RkTheme} from 'react-native-ui-kitten';
 import {
     KittenTheme
 } from './app/config/theme';
+import { NavBar } from './app/components'
 import {
     ScrollView,
     View,
@@ -140,18 +141,17 @@ export default class App extends React.Component {
 
         return (
             <RootNavigator />
-                /*
-            <SmileEcoupon
+            /*<RootNavigator
                 onNavigationStateChange={(prevState, currentState) => {
               const currentScreen = getCurrentRouteName(currentState);
               const prevScreen = getCurrentRouteName(prevState);
 
                 if (prevScreen !== currentScreen) {
-
+                    //track(currentScreen);
                 }
                 }}
-            />
-*/
+            />*/
+
         );
     }
 }

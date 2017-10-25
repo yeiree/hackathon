@@ -23,8 +23,9 @@ export class ItemListGrid extends React.Component {
 
     constructor(props) {
         super(props);
+        //console.log(JSON.stringify(props));
         this.state = {
-            dimensions: {width:width, height:height}
+            dimensions: {width:width, height:height},
         }
     };
 
@@ -43,8 +44,8 @@ export class ItemListGrid extends React.Component {
     render() {
 
         let items = <View/>;
-
         if (this.state.dimensions) {
+            let navi = this.state.navigation;
             let size = this.state.dimensions.width / 2;
 
             let filterdItemData = itemdata.filter(function(item) {
@@ -56,7 +57,7 @@ export class ItemListGrid extends React.Component {
 
             items = filterdItemData.map(function (iteminfo, index) {
                 return (
-                   <ItemView key={index} size={size} iteminfo={iteminfo} />
+                   <ItemView key={index} size={size} iteminfo={iteminfo}/>
                 )
             });
 

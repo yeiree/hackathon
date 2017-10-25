@@ -18,6 +18,7 @@ import {
 export class ItemView extends React.Component {
     constructor(props) {
         super(props);
+
         this._navigateAction = this._navigate.bind(this);
         this.state = {
             size: props.size,
@@ -32,7 +33,8 @@ export class ItemView extends React.Component {
                 NavigationActions.navigate({routeName: route})
             ]
         });
-        this.props.navigation.dispatch(resetAction)
+
+        this.props.move(resetAction)
     }
 
     render() {
@@ -43,9 +45,8 @@ export class ItemView extends React.Component {
             <RkButton rkType='tile'
                       style={{height: size, width: size}}
                       key={iteminfo.no}
-                      onPress={() => {
-                          this._navigate('SmilePay')
-                    }}>
+                      onPress={()=>{}
+                    }>
 
                 <Image
                     style={styles.image}
@@ -60,6 +61,7 @@ export class ItemView extends React.Component {
     };
 }
 
+
 let styles = RkStyleSheet.create(theme => ({
     image: {
         width: 80,
@@ -68,3 +70,4 @@ let styles = RkStyleSheet.create(theme => ({
         marginBottom:16
     }
 }));
+
