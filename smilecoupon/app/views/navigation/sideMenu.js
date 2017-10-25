@@ -67,7 +67,7 @@ export class SideMenu extends React.Component {
                     showsVerticalScrollIndicator={false}>
                     <View style={[styles.container, styles.content]}>
                         {this._renderIcon()}
-                        <RkText rkType='logo'>스마일 다방</RkText>
+                        <RkText rkType='logo'>Smile Dabang</RkText>
                     </View>
                     {menu}
                 </ScrollView>
@@ -84,8 +84,7 @@ let styles = RkStyleSheet.create(theme => ({
         borderColor: theme.colors.border.base
     },
     root: {
-        //paddingTop: Platform.OS === 'ios' ? 20 : 0,
-        paddingTop: 20,
+        paddingTop: Platform.OS === 'ios' ? 20 : 0,
         backgroundColor: theme.colors.screen.base
     },
     content: {

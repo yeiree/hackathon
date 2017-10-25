@@ -31,13 +31,15 @@ export class ItemView extends React.Component {
                       onPress={() => {
                       //todo:
                     }}>
+
                 <Image
                     style={styles.image}
-                    source={{uri: 'http://gdimg.gmarket.co.kr/586623345/still/160'}}
+                    source={{uri: `http://gdimg.gmarket.co.kr/${iteminfo.no}/still/160`}}
                 />
-                <RkText rkType='small'>{iteminfo.name}</RkText>
-            </RkButton>
 
+                <RkText rkType='primary5'>{iteminfo.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</RkText>
+                <RkText rkType='primary4'>{iteminfo.name}</RkText>
+            </RkButton>
 
         )
     };
@@ -45,8 +47,9 @@ export class ItemView extends React.Component {
 
 let styles = RkStyleSheet.create(theme => ({
     image: {
-        width: 50,
-        height:50,
-        paddingLeft:20
+        width: 80,
+        height:80,
+        paddingLeft:20,
+        marginBottom:16
     }
 }));

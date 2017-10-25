@@ -9,7 +9,7 @@ import {
     DrawerNavigator,
     StackNavigator
 } from 'react-navigation';
-import {AppRoutes} from './config/navigation/routeBuilder';
+//import {AppRoutes} from './config/navigation/routesBuilder';
 import {withRkTheme} from 'react-native-ui-kitten';
 import * as Screens from './views';
 
