@@ -2,7 +2,6 @@ import React from 'react';
 import {
     View,
     Image,
-    ScrollView,
     Dimensions
 } from 'react-native';
 
@@ -42,13 +41,11 @@ export class MainView extends React.Component {
     }
 
     render() {
-        let chartBlockStyles = [styles.chartBlock, {backgroundColor: RkTheme.current.colors.control.background}];
+        let chartBlockStyles = [styles.chartBlock, {backgroundColor: 'white'}];
         return (
-            <ScrollView style={styles.screen}>
-                <View style={chartBlockStyles}>
-                    <ProgressChart/>
-                </View>
-            </ScrollView>
+            <View style={chartBlockStyles}>
+                <ProgressChart/>
+            </View>
         )
     }
 }

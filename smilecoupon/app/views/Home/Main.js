@@ -2,27 +2,23 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     Text,
-    View
+    View,
+    Button
+
 } from 'react-native';
-import {MainRoutes} from '../../config/navigation/route';
+import { HeaderView }  from '../../components';
+
 
 export class Main extends React.Component {
-    static navigationOptions = ({navigation}) => ({
-        title: 'Smile DaBang'.toUpperCase()
-    });
-
-    constructor(props) {
-        super(props);
-        this.state = {dimensions: undefined}
-    };
 
     render() {
         return (
 
             <View style={styles.container}>
-                <Text>Home!</Text>
-                <Text>Changes you make will automatically reload.</Text>
-                <Text>Shake your phone to open the developer menu.</Text>
+                <HeaderView />
+                <Button onPress={()=> this.props.navigation.navigate('DrawerOpen')}
+                        title="Open"
+                />
             </View>
         );
     }
