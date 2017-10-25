@@ -17,7 +17,6 @@ import {FontAwesome} from '../assets/icons';
 
 import {
     ProgressChart,
-    HeaderView,
     MyInfo,
     OrderInfo
 } from '../components/';
@@ -53,7 +52,6 @@ export class MainView extends React.Component {
             <ScrollView style={styles.screen}>
                 <View>
                     <View style={chartBlockStyles}>
-                        <HeaderView/>
                         <ProgressChart/>
                     </View>
                     <View style={leftBlockStyles}>
