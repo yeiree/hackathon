@@ -19,11 +19,15 @@ import {
 import {bootstrap} from './app/config/bootstrap';
 import { AppLoading, Asset, Font } from 'expo';
 import track from './app/config/analytics';
-import {MainView} from "./app/views/mainview";
 
 bootstrap();
 RkTheme.setTheme(KittenTheme);
 
+/**
+ * route name 가져오기
+ * @param navigationState
+ * @returns {*}
+ */
 function getCurrentRouteName(navigationState) {
     if (!navigationState) {
         return null;
@@ -36,6 +40,49 @@ function getCurrentRouteName(navigationState) {
 }
 
 let SideMenu = withRkTheme(Screens.SideMenu);
+let ItemListGrid = withRkTheme(Screens.ItemListGrid);
+
+const Stack = {
+    Start: {
+        screen: Screens.SplashScreen
+    },
+    MainView: {
+        screen: Screens.MainView
+    },
+    ItemListGrid: {
+        screen: Screens.ItemListGrid
+    }
+};
+
+const DrawerRoutes1 = {
+    MainViewStack: {
+        name: 'MainViewStack',
+        screen: StackNavigator(Stack, { initialRouteName: 'MainView' })
+    },
+    ItemListGridStack: {
+        name: 'ItemListGridStack',
+        screen: StackNavigator(Stack, { initialRouteName: 'ItemListGrid' })
+    },
+};
+
+const RootNavigator =
+    StackNavigator({
+            Drawer: {
+                name: 'Drawer',
+                screen: DrawerNavigator({
+                        ...DrawerRoutes1
+                    },
+                    {
+                        contentComponent: (props) => <SideMenu {...props}/>
+                    }
+                ),
+            },
+            ...Stack
+        },
+        {
+            headerMode: 'none'
+        }
+    );
 
 
 export default class App extends React.Component {
@@ -68,7 +115,7 @@ export default class App extends React.Component {
         }
 
         return (
-            <MainView />
+            <RootNavigator />
                 /*
             <SmileEcoupon
                 onNavigationStateChange={(prevState, currentState) => {

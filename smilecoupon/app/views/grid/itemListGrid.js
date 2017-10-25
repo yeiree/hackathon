@@ -3,16 +3,18 @@ import {
     ScrollView,
     View,
     StyleSheet,
-    Text
+    Text,
+    Dimensions
 } from 'react-native';
 import {
     RkText,
     RkButton,
     RkStyleSheet
 } from 'react-native-ui-kitten';
-import {MainRoutes} from '../../config/navigation/routes';
-import {itemdata} from '../../data/raw'
+
 import {ItemView} from '../../components'
+import {itemdata} from '../../data'
+const { width, height } = Dimensions.get('window');
 
 export class ItemListGrid extends React.Component {
     static navigationOptions = {
@@ -22,7 +24,7 @@ export class ItemListGrid extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            dimensions: props.dimensions
+            dimensions: {width:width, height:height}
         }
     };
 
@@ -44,11 +46,13 @@ export class ItemListGrid extends React.Component {
 
         if (this.state.dimensions) {
             let size = this.state.dimensions.width / 2;
-            let emptyCount = this._getEmptyCount(size);
 
             let filterdItemData = itemdata.filter(function(item) {
-                item.brandname === 'starbucks'
-            });
+                return item.brandname === 'starbucks'
+            })[0].item;
+
+            let itemCount = filterdItemData.length;
+            let emptyCount = this._getEmptyCount(size, itemCount);
 
             items = filterdItemData.map(function (iteminfo, index) {
                 return (
@@ -61,7 +65,9 @@ export class ItemListGrid extends React.Component {
             }
         }
         return (
-            <ScrollView style={styles.root}
+            <ScrollView
+                style={styles.root}
+                onLayout={this._onLayout}
                 contentContainerStyle={styles.rootContainer}>
                 {items}
             </ScrollView>
@@ -74,7 +80,8 @@ let styles = RkStyleSheet.create(theme => ({
         backgroundColor: theme.colors.screen.base
     },
     rootContainer: {
-        paddingVertical: 20
+        flexDirection: 'row',
+        flexWrap: 'wrap',
     },
     empty: {
         borderWidth: StyleSheet.hairlineWidth,
@@ -82,9 +89,5 @@ let styles = RkStyleSheet.create(theme => ({
     },
     icon: {
         marginBottom: 16
-    },
-    rootContainer: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-    },
+    }
 }));
