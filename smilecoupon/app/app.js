@@ -18,14 +18,16 @@ import {
     DrawerNavigator,
     StackNavigator
 } from 'react-navigation';
-//import {AppRoutes} from './app/config/navigation/routesBuilder';
+import {AppRoutes} from './config/navigation/routesBuilder';
 import {bootstrap} from './config/bootstrap';
 import { AppLoading, Asset, Font } from 'expo';
 import {NavBar} from './components'
 import track from './config/analytics';
-//import {PushController} from './pushController'
+import {PushController} from "./library"
 //import PushNotification from 'react-native-push-notification';
 import transition from './config/navigation/transitions'
+//import {GeoController} from './library/geo/geoController'
+//import * as BackgroundGeolocation from 'react-native-background-geolocation'
 
 bootstrap();
 RkTheme.setTheme(KittenTheme);
@@ -47,7 +49,9 @@ function getCurrentRouteName(navigationState) {
 }
 
 let SideMenu = withRkTheme(Screens.SideMenu);
-let ItemListGrid = withRkTheme(Screens.ItemListGrid);
+//let ItemListGrid = withRkTheme(Screens.ItemListGrid);
+
+const SmileCoupon = AppRoutes;
 
 const Stack = {
     Start: {
@@ -61,7 +65,7 @@ const Stack = {
     }
 };
 
-let ThemedNavigationBar = withRkTheme(NavBar);
+//let ThemedNavigationBar = withRkTheme(NavBar);
 const DrawerRoutes1 = {
     MainViewStack: {
         name: 'MainViewStack',
@@ -73,7 +77,7 @@ const DrawerRoutes1 = {
                 , navigationOptions: ({navigation, screenProps}) => ({
                     gesturesEnabled: false
                     , header: (headerProps) => {
-                        return <ThemedNavigationBar navigation={navigation} headerProps={headerProps}/>
+                        return <NavBar navigation={navigation} headerProps={headerProps}/>
                     }
                 })
             }
@@ -99,6 +103,7 @@ const DrawerRoutes1 = {
 
 const RootNavigator =
     StackNavigator({
+
             Drawer: {
                 name: 'Drawer',
                 screen: DrawerNavigator({
@@ -117,54 +122,7 @@ const RootNavigator =
     );
 
 
-export default class App extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-        /*
-        if(Platform.OS !== 'ios') {
-            this.handleAppStateChange = this.handleAppStateChange.bind(this);
-        }
-*/
-        this.state = {
-            seconds: 5,
-        };
-    }
-
-    componentDidMount() {
-        /*
-        if(Platform.OS !== 'ios') {
-            AppState.addEventListener('change', this.handleAppStateChange);
-        }
-         */
-    }
-
-    componentWillUnmount() {
-         /*
-        if(Platform.OS !== 'ios') {
-            AppState.removeEventListener('change', this.handleAppStateChange);
-        }
-          */
-    }
-
-    handleAppStateChange(appState) {
-        /*
-        if (appState === 'background') {
-            let date = new Date(Date.now() + (this.state.seconds * 1000));
-
-            if (Platform.OS !== 'ios') {
-                date = date.toISOString();
-
-
-            PushNotification.localNotificationSchedule({
-                message: "My Notification Message",
-                date,
-            });
-            }
-        }
-         */
-    }
+export class App2 extends React.Component {
 
     state = {
         isReady: false,
@@ -194,40 +152,10 @@ export default class App extends React.Component {
         }
 
         return (
-            <View>
-                <RootNavigator />
 
-            </View>
-            /*
-             <SmileEcoupon
-             onNavigationStateChange={(prevState, currentState) => {
-             const currentScreen = getCurrentRouteName(currentState);
-             const prevScreen = getCurrentRouteName(prevState);
+            <SmileCoupon />
 
-             if (prevScreen !== currentScreen) {
-
-             }
-             }}
-             />
-             */
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    picker: {
-        width: 100,
-    },
-});
 

@@ -41,7 +41,7 @@ export class SplashScreen extends React.Component {
                     StatusBar.setHidden(false, 'slide');
                     let toHome = NavigationActions.reset({
                         index: 0,
-                        actions: [NavigationActions.navigate({routeName: 'Home'})]
+                        actions: [NavigationActions.navigate({routeName: 'MainView'})]
                     });
                     this.props.navigation.dispatch(toHome)
                 }, timeFrame);
@@ -62,7 +62,7 @@ export class SplashScreen extends React.Component {
         return (
             <View style={styles.container}>
                 <View>
-                    <Image style={[styles.image, {width}]} source={require('../../assets/images/splashBack.png')}/>
+                    <Image style={[styles.image, {width}]} source={require('../../assets/images/hackathon.jpg')}/>
                     <View style={styles.text}>
                         <RkText rkType='light' style={styles.hero}>React Native</RkText>
                         <RkText rkType='logo' style={styles.appName}>UI Kitten</RkText>

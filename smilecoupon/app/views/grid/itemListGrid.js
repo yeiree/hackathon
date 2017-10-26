@@ -18,7 +18,7 @@ const { width, height } = Dimensions.get('window');
 
 export class ItemListGrid extends React.Component {
     static navigationOptions = {
-        title: 'ItemListGrid'.toUpperCase()
+        title: 'ItemView'.toUpperCase()
     };
 
     constructor(props) {

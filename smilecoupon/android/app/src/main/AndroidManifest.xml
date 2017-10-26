@@ -12,6 +12,7 @@
         android:protectionLevel="signature" />
     <uses-permission android:name="com.smilecoupon.permission.C2D_MESSAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <uses-sdk
         android:minSdkVersion="16"
@@ -41,7 +42,7 @@
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <category android:name="com.pushnotificationhowto" />
+                <category android:name="com.smilecoupon" />
             </intent-filter>
         </receiver>
         <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher" />

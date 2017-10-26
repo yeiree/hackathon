@@ -3,6 +3,9 @@ package com.smilecoupon;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation;
+import com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation;
+import com.transistorsoft.rnbackgroundgeolocation.RNBackgroundGeolocation;
 import com.horcrux.svg.SvgPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.idehub.GoogleAnalyticsBridge.GoogleAnalyticsBridgePackage;
@@ -13,6 +16,8 @@ import com.facebook.soloader.SoLoader;
 
 import java.util.Arrays;
 import java.util.List;
+
+import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -26,9 +31,13 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNBackgroundGeolocation(),
+            new RNBackgroundGeolocation(),
+            new RNBackgroundGeolocation(),
+            new RNBackgroundGeolocation(),
             new SvgPackage(),
             new LinearGradientPackage(),
-            new GoogleAnalyticsBridgePackage()
+            new ReactNativePushNotificationPackage()
       );
     }
 

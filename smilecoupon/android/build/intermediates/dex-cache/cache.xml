@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\smilecoupon\react-native-google-analytics-bridge\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="793bbddf152bfcd25ce35c8528e1d2d1e20b8166">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\smilecoupon-react-native-google-analytics-bridge-unspecified_36e3731eddde39da014cec28160efc5d22f1cb3b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hyum2\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_e77d5986ae1a609044679a20a31f765765c6ba27.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.2.0_fa6e038d48d4301b5164e68d5b8c926c11b952da.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_0d8379487a3be3df832a1e5c4fb37594bb939e94.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\smilecoupon\react-native-svg\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="392fe387ee22ff67442725b66a8e0b2f40b9ee24">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\smilecoupon-react-native-svg-unspecified_885b4e7d9651e317f085e820f27a56e5c73d7c92.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.48.3\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="56d3e81fee5f47a7a12ab65f4620f580c9c71d1e">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.48.3_1e4491662ce5d9ed4036b412c2973fad54c7f5bc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hyum2\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_eb8b8ac75833be14d065cdb099cb6369a8c2beec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_11cfd22e646dba4aa2b291dbf7592812e5398544.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-v4-impl\11.0.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c1b91bc7e480ab100d0397b16c93732e26fd10eb">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tagmanager-v4-impl-11.0.4_b64d42c92744ee17b258b26574b7cae57a5c0ee5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hyum2\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_24b538e3ee9098d1d49567af4a6547f01538ca3f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\11.0.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-11.0.4_2754aec76513461d2c4d0204f85258fe8cd1ffe5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hyum2\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_a3d28fdae1a1527793cb9ee02c8f3de5cdf71909.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\11.0.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-11.0.4_5cef703b8c4e2835b90adf9a135cd53b33161d26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\11.0.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2c2f1b3f82c027e98f56bb0154de0acbcce42e6d">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-impl-11.0.4_5e56d31382544ef031ea0e9167adf1375acc0235.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.48.3\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_d5e2e9b0589eda66b40764de5622159c69612761.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hyum2\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\support-annotations-25.2.0_6f8dc0666637aef97e9fe4b241e73e82ebd72b17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.2.0_6ed669746685949542dc67b283ef09e1f0c52ff7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hyum2\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_209651f03c33245a4a0e98b695fd2f9778d4d5ce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.2.0_14562b113e9b96117592dd0e58802c0a71a2f666.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\smilecoupon\react-native-push-notification\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2e3e5a199c7209bab2dd53b85eefb664494af06d">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\smilecoupon-react-native-push-notification-unspecified_feffe9a02a2515648025e6ef6e64313bddfb1508.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.facebook.soloader-soloader-0.1.0_372aea3e33db3853f65668b109aca41b7d870bb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\11.0.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a25b0b5aec89681b95d32780ad7904c1e1e4c679">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-11.0.4_754d116a662ac7d002ea1f25a609b86674d8c18a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hyum2\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_7fe2e0c0f7c1b61d18f9d7c2ace847032dc77200.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_64576c71e4ef6bd5798632339508fd9c01191679.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_c8fcb43fda832396d99648ad5f73579802278e45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.2.0_690af7de4eda6e2a144ade636561a5f9fd995a47.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.2.0_364fd0fd19febb01ac3e52eff3c1c35e3e28ef21.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\me.leolin\ShortcutBadger\1.1.8\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="531c33d3697000a05e9493a2d0f09ba41fa114d3">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\me.leolin-ShortcutBadger-1.1.8_9bf66f36654db4027c1c5fa2c24d7da40e55c196.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hyum2\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.6.0\3f9b16b774f2c36cfd86dd2053d0b3059531dacc\okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.6.0_67a7f35ede49f8b98a486291cabf200014daefbc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.0.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-11.0.4_e25a1dc19e7388475d8bf43f8766377f6c84e0fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\smilecoupon\react-native-linear-gradient\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b1de8f75805268154da5e88bb6195760b9d8966f">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\smilecoupon-react-native-linear-gradient-unspecified_3086fe1fbe87e011520b5c421a15c88811c69ba0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_8986505f5746b9fdd959b4492858814669e86dda.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_7b255d0f862c15aee7eac88f1c877968abc67949.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dcb5b75baf05d92e61d5706737200ee55949f97b">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-8.1.0_f53c1ea33f8849d47c4d691a4fff032aed2e469a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_cb30771aca69f141e04b0bc1217f988edd2e2ad9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.2.0_0141ba06bf01002c9e99227d095343d162711e84.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\source_repository\hackathon\smilecoupon\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_ad3cd8dc206509b6471de3820b81ba5ff432ae25.jar" />
+    </item>
+
+</items>
