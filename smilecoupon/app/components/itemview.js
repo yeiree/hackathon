@@ -24,6 +24,8 @@ export class ItemView extends React.Component {
             size: props.size,
             iteminfo: props.iteminfo
         }
+        //console.log(JSON.stringify(props.handleToUpdate));
+        this.handleToUpdate  =  props.handleToUpdate;
     };
 
     _navigate(route) {
@@ -40,13 +42,14 @@ export class ItemView extends React.Component {
     render() {
         let size = this.state.size;
         let iteminfo = this.state.iteminfo;
+        var handleToUpdate = this.handleToUpdate;
         return (
 
             <RkButton rkType='tile'
                       style={{height: size, width: size}}
                       key={iteminfo.no}
-                      onPress={()=>{}
-                    }>
+                      onPress={()=>handleToUpdate()}
+                    >
 
                 <Image
                     style={styles.image}

@@ -68,8 +68,7 @@ export class OrderListGrid extends React.Component {
     render() {
         return (
             <View>
-            <Modal isVisible={this.state.isModalVisible}
-                   >
+            <Modal isVisible={this.state.isModalVisible}>
                 <View style={styles.modalContent}>
                     <Image style={styles.image} source={{uri: `http://barcode.ebaykorea.com/barcode/360/108/999273076215`}}/>
                     <RkButton rkType='clear' onPress={this._hideModal}>
