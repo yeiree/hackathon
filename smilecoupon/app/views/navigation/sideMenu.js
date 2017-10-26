@@ -20,6 +20,7 @@ export class SideMenu extends React.Component {
 
     constructor(props) {
         super(props);
+
         this._navigateAction = this._navigate.bind(this);
     }
 
@@ -35,7 +36,7 @@ export class SideMenu extends React.Component {
 
     _renderIcon() {
         if (RkTheme.current.name === 'light')
-            return <Image style={styles.icon} source={require('../../assets/images/smallLogo.png')}/>;
+            return <Image style={styles.icon} source={require('../../assets/images/smile_small.png')}/>;
         return <Image style={styles.icon} source={require('../../assets/images/smallLogoDark.png')}/>
 
     }

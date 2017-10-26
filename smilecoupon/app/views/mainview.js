@@ -16,7 +16,9 @@ import {KittenTheme} from '../config/theme'
 import {FontAwesome} from '../assets/icons';
 
 import {
-    ProgressChart
+    ProgressChart,
+    MyInfo,
+    OrderInfo
 } from '../components/';
 
 
@@ -45,10 +47,19 @@ export class MainView extends React.Component {
 
     render() {
         let chartBlockStyles = [styles.chartBlock, {backgroundColor: RkTheme.current.colors.control.background}];
+        let leftBlockStyles = [styles.leftBlock, {backgroundColor: RkTheme.current.colors.control.background}];
         return (
             <ScrollView style={styles.screen}>
-                <View style={chartBlockStyles}>
-                    <ProgressChart/>
+                <View>
+                    <View style={chartBlockStyles}>
+                        <ProgressChart/>
+                    </View>
+                    <View style={leftBlockStyles}>
+                        <MyInfo/>
+                    </View>
+                    <View style={leftBlockStyles}>
+                        <OrderInfo/>
+                    </View>
                 </View>
             </ScrollView>
         )
@@ -84,6 +95,16 @@ let styles = RkStyleSheet.create(theme => ({
         color: 'white',
     },
     chartBlock: {
+        padding: 15,
+        marginBottom: 15,
+        justifyContent: 'center'
+    },
+    leftBlock: {
+        //width: 230,
+        padding: 70,
+        marginBottom: 15
+    },
+    rightBlock: {
         padding: 15,
         marginBottom: 15,
         justifyContent: 'center'

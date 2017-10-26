@@ -11,8 +11,9 @@ import {
     RkButton,
     RkStyleSheet
 } from 'react-native-ui-kitten';
+import Modal from 'react-native-modal'
 
-import {ItemView} from '../../components'
+import {ItemView, SmilePay} from '../../components'
 import {itemdata} from '../../data'
 const { width, height } = Dimensions.get('window');
 
@@ -23,9 +24,12 @@ export class ItemListGrid extends React.Component {
 
     constructor(props) {
         super(props);
+        //console.log(JSON.stringify(props));
         this.state = {
-            dimensions: {width:width, height:height}
+            dimensions: {width:width, height:height},
+            isModalVisible: false
         }
+        this.handleToUpdate  = this._showModal.bind(this);
     };
 
     _onLayout = event => {
@@ -40,13 +44,19 @@ export class ItemListGrid extends React.Component {
         return rowCount * 2 - itemdata.length;
     };
 
+    _showModal = () => this.setState({ isModalVisible: true });
+    _hideModal = () => {
+        this.setState({isModalVisible: false});
+        //alert('결제되었습니다.');
+    }
+
     render() {
-
+        var handleToUpdate  =   this.handleToUpdate;
+        console.log(JSON.stringify(this.handleToUpdate));
         let items = <View/>;
-
         if (this.state.dimensions) {
             let size = this.state.dimensions.width / 2;
-
+            let modal = this.state.isModalVisible;
             let filterdItemData = itemdata.filter(function(item) {
                 return item.brandname === 'starbucks'
             })[0].item;
@@ -56,7 +66,7 @@ export class ItemListGrid extends React.Component {
 
             items = filterdItemData.map(function (iteminfo, index) {
                 return (
-                   <ItemView key={index} size={size} iteminfo={iteminfo} />
+                   <ItemView key={index} size={size} iteminfo={iteminfo} handleToUpdate = {handleToUpdate}/>
                 )
             });
 
@@ -65,12 +75,23 @@ export class ItemListGrid extends React.Component {
             }
         }
         return (
+            <View>
+            <Modal isVisible={this.state.isModalVisible}>
+                <View style={styles.modalContent}>
+                    <SmilePay />
+                    <RkButton rkType='clear' onPress={this._hideModal}>
+                        <RkText rkType='awesome hintColor' >{'Check out'}</RkText>
+                    </RkButton>
+                </View>
+
+            </Modal>
             <ScrollView
                 style={styles.root}
                 onLayout={this._onLayout}
                 contentContainerStyle={styles.rootContainer}>
                 {items}
             </ScrollView>
+            </View>
         );
     }
 }
@@ -89,5 +110,13 @@ let styles = RkStyleSheet.create(theme => ({
     },
     icon: {
         marginBottom: 16
+    },
+    modalContent: {
+        backgroundColor: '#fff',
+        padding: 100,
+        justifyContent: 'center',
+        alignItems: 'center',
+        //borderRadius: 4,
+        //borderColor: 'rgba(0, 0, 0, 0.1)',
     }
 }));

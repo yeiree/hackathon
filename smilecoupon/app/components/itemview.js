@@ -10,28 +10,46 @@ import {
     RkButton,
     RkStyleSheet
 } from 'react-native-ui-kitten';
+import {NavigationActions} from 'react-navigation';
+import {
+    SmilePay
+} from './index';
 
 export class ItemView extends React.Component {
     constructor(props) {
         super(props);
+
+        this._navigateAction = this._navigate.bind(this);
         this.state = {
             size: props.size,
             iteminfo: props.iteminfo
         }
+        //console.log(JSON.stringify(props.handleToUpdate));
+        this.handleToUpdate  =  props.handleToUpdate;
     };
+
+    _navigate(route) {
+        let resetAction = NavigationActions.reset({
+            index: 0,
+            actions: [
+                NavigationActions.navigate({routeName: route})
+            ]
+        });
+
+        this.props.move(resetAction)
+    }
 
     render() {
         let size = this.state.size;
         let iteminfo = this.state.iteminfo;
-        let navigate = this.props.navigation.navigate;
+        var handleToUpdate = this.handleToUpdate;
         return (
 
             <RkButton rkType='tile'
                       style={{height: size, width: size}}
                       key={iteminfo.no}
-                      onPress={() => {
-                      //todo:
-                    }}>
+                      onPress={()=>handleToUpdate()}
+                    >
 
                 <Image
                     style={styles.image}
@@ -46,6 +64,7 @@ export class ItemView extends React.Component {
     };
 }
 
+
 let styles = RkStyleSheet.create(theme => ({
     image: {
         width: 80,
@@ -54,3 +73,4 @@ let styles = RkStyleSheet.create(theme => ({
         marginBottom:16
     }
 }));
+
